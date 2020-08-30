@@ -1,5 +1,4 @@
-# Arduino controlled Photogrammetry Wi-Fi 3D-scanner
-## (with ESP8266 Wi-fi Module)
+# Arduino controlled Photogrammetry Wi-Fi 3D-scanner using ESP8266
 
 *This is the Wi-Fi version of [Brian Brocken's original work](https://hackaday.io/project/168301-arduino-controlled-photogrammetry-3d-scanner), so thanks to him for the original project.
 
@@ -21,7 +20,23 @@ Instead of using a servo to presses a button on a bluetooth remote, which is imp
 
 ***This version uses an ESP8266 connected to the same Wi-Fi network as a smartphone running the IP Webcam Android app***. Of course any app would work, it just needs to make your phone's camera available through the web. Just note that you would need to change the code and make the right HTTP request in order to obtain pictures from your camera.
 
-The ESP-01 module and the Arduino communicate via an I2C protocol, and exchange messages on whether the picture was taken or not, and whether the table should rotate or not.
+***The ESP-01 module and the Arduino communicate via an I2C protocol, and exchange messages on whether the picture was taken or not, and whether the table should rotate or not.***
+
+## Usage
+### Initial Setup
+0. Build the Camera Turtable as described [here](https://hackaday.io/project/168301-arduino-controlled-photogrammetry-3d-scanner), except for the bluetooth remote and servo.
+1. Connect the ESP8266 and the Arduino via an I2C communication.
+2. Edit the `ESP8266-side.ino` code and insert your Wi-Fi's SSID and password. Also insert your phone's IP address inside your network. Remember they have to be connected to the same Wi-Fi network in order for this to work.
+3. Upload the `ESP8266-side.ino` code on the ESP8266
+4. Upload the `turntable-side.ino` code on the Arduino inside the turntable
+
+### Daily usage
+1. When you turn your table on, go once to the left and select "Connect to Wi-Fi". Wait a few seconds and it should write "CONNECTED" and go back to the initial screen.
+2. Select "Photogrammetry"
+3. Select the number of photos
+4. Enjoy!
+
+***For the other modes "Cinematic" and "Manual Control", it shouldn't make any difference from the original work.***
 
 ### Improvements from original version
 
@@ -35,19 +50,3 @@ This version includes:
 
 *Note that leaving #define LOG_SERIAL uncommented and connecting both devices WILL MOST LIKELY NOT WORK. Uncomment when you're finished debugging so it works smoothly
 
-
-## Usage
-### Initial Setup
-0) Build the Camera Turtable as described [here](https://hackaday.io/project/168301-arduino-controlled-photogrammetry-3d-scanner), except for the bluetooth remote and servo.
-1) Connect the ESP8266 and the Arduino via an I2C communication.
-2) Edit the `ESP8266-side.ino` code and insert your Wi-Fi's SSID and password. Also insert your phone's IP address inside your network. Remember they have to be connected to the same Wi-Fi network in order for this to work.
-3) Upload the `ESP8266-side.ino` code on the ESP8266
-4) Upload the `turntable-side.ino` code on the Arduino inside the turntable
-
-### Daily usage
-1) When you turn your table on, go once to the left and select "Connect to Wi-Fi". Wait a few seconds and it should write "CONNECTED" and go back to the initial screen.
-2) Select "Photogrammetry"
-3) Select the number of photos
-4) Enjoy!
-
-***For the other modes "Cinematic" and "Manual Control", it shouldn't make any difference from the original work.***
