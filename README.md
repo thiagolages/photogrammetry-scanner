@@ -7,7 +7,7 @@
 -------------------------------------------
 Video of an result example
 -------------------------------------------
-[![Watch the video](https://img.youtube.com/vi/YgXV4LTF02c/hqdefault.jpg)](https://www.youtube.com/watch?v=YgXV4LTF02c)
+[![Watch the video](black-panther.gif)](https://www.youtube.com/watch?v=YgXV4LTF02c)
 
 ### Description
 
