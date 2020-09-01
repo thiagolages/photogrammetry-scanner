@@ -50,3 +50,11 @@ This version includes:
 
 *Note that leaving #define LOG_SERIAL uncommented and connecting both devices WILL MOST LIKELY NOT WORK. Uncomment when you're finished debugging so it works smoothly
 
+
+---------------------------------------
+To-do List
+---------------------------------------
+
+- Include Electrical Diagram 
+- Explain how communication takes place between Arduino <-> ESP8266
+- Explain what each device does
