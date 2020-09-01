@@ -4,6 +4,10 @@
 
 *Work in progress*
 
+-------------------------------------------
+Video of an result example
+-------------------------------------------
+[![Watch the video](https://img.youtube.com/vi/YgXV4LTF02c/hqdefault.jpg)](https://www.youtube.com/watch?v=YgXV4LTF02c)
 
 ### Description
 
@@ -13,14 +17,13 @@ The description of the project, given by Brian Brocken himself is as follows:
 
 ### This Wi-Fi version uses:
 
-- An ESP8266 (ESP-01) module
-- [The IP Webcam app for Android](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en)
+- ***An ESP8266 (ESP-01 module) connected to the same Wi-Fi network as a smartphone running the IP Webcam Android app***. Of course any app would work, it just needs to make your phone's camera available through the web. Just note that you would need to change the code and make the right HTTP request in order to obtain pictures from your camera. ***The ESP-01 module and the Arduino communicate via an I2C protocol, and exchange messages on whether the picture was taken or not, and whether the table should rotate or not.***
+
+- [The IP Webcam app](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en) installed on any compatible Android phone.
 
 Instead of using a servo to presses a button on a bluetooth remote, which is imprecise, slow, noisy and not truly reliable, I felt like creating a more robust and electronically-controlled way to take pictures. 
 
-***This version uses an ESP8266 connected to the same Wi-Fi network as a smartphone running the IP Webcam Android app***. Of course any app would work, it just needs to make your phone's camera available through the web. Just note that you would need to change the code and make the right HTTP request in order to obtain pictures from your camera.
 
-***The ESP-01 module and the Arduino communicate via an I2C protocol, and exchange messages on whether the picture was taken or not, and whether the table should rotate or not.***
 
 ## Usage
 ### Initial Setup
